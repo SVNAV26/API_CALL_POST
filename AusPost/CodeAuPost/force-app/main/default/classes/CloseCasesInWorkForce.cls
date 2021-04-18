@@ -25,7 +25,7 @@ global class CloseCasesInWorkForce implements Database.Batchable<sObject>, Datab
                     Http http = new Http();
                 
                     request.setHeader('Content-Type', 'application/json');
-                    request.setEndpoint('Your Endpoint URL');
+                    request.setEndpoint('https://c39e7bec-7891-480e-85e3-8ac971291e9b.mock.pstmn.io//v1/casestatus');
                     request.setMethod('POST');
                 	request.setBody('{"id":"'+cs.Id+'", '+'"agentId:"'+cs.OwnerId+'" }');
                     response = http.send(request);
